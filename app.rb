@@ -15,6 +15,7 @@ post '/' do
   if @login == 'admin' && @password == 'secret'
     erb :welcome
   else
+    @error_message = 'Access Denied'
   erb :index
   end
 end
