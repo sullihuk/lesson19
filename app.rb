@@ -1,12 +1,26 @@
 require 'sinatra'
 require 'sinatra/contrib/all'
 
+get '/faq' do
+  @title = "FAQ"
+  @message= "Under construction"
+  erb :message  
+end
+get '/something' do
+  @title = "Something"
+  @message= "something else"
+  erb :message  
+end
+
 get '/' do
     erb :index  
 end
 
 get '/contacts' do 
-  '19191991'
+  @title = "Contacts"
+  @message= "Phone number"
+  erb :message  
+
 end
 
 post '/' do
